@@ -31,6 +31,7 @@ contact:
 home:
   # Paragraphs before the GitHub card.
   intro:
+    - "This is a demo of [Blueprint](https://github.com/flaviaouyang/blueprint), a template for personal sites. Want one like it? **[Use the template](https://github.com/new?template_name=blueprint&template_owner=flaviaouyang)** and you'll have your own in a few minutes. Everything below is example content."
     - I'm a software engineer at Example Corp, where I build the tools other engineers use every day.
     - I also work in the open. You can find my projects and contributions on GitHub.
   # The paragraph before your three newest posts.
