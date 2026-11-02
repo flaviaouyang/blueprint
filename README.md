@@ -1,10 +1,5 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset=".github/logo-dark.svg">
-  <img src=".github/logo-light.svg" alt="" width="72" height="72">
-</picture>
-
 # Blueprint
 
 **A personal site that looks like an engineering drawing.**<br>
