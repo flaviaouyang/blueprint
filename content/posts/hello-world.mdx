@@ -1,0 +1,40 @@
+---
+title: Hello, world
+publishedAt: '2026-01-15'
+summary: A first post, showing what a post can hold.
+---
+
+This is an example post. Replace it with your own, or delete this file. Run
+`make blog SLUG=my-post TITLE="My post"` to start a new one as a draft.
+
+## Writing
+
+Posts are [Markdown](https://commonmark.org/help/) with a few extras. Each `##` heading
+gets a number and a place in the table of contents, which sits in the margin on wide
+screens. **Bold**, *italic*, and `inline code` work as you'd expect.
+
+> Block quotes are drawn with a rule down the side.
+
+## Code
+
+Code blocks are highlighted in the site's palette:
+
+```python
+def greet(name: str) -> str:
+    return f"Hello, {name}"
+```
+
+## Images
+
+Put images in `public/images/<post>/` and add them with the `Image` component. They're
+drawn in the site's duotone and numbered.
+
+<Image src={`/images/hello-world/diagram.svg`} alt={`A diagram of a request passing from a browser to a server and back`} width={800} height={320} caption="A request and its response" />
+
+| Option | What it does |
+| ------ | ------------ |
+| `dark` | Inverts a dark screenshot so it reads like a light code block |
+| `eager` | Loads an image near the top of a post right away |
+| `caption` | Adds a caption after the figure number |
+
+That's all there is to it.

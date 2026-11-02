@@ -1,0 +1,84 @@
+# Everything about you: Home, About, and each page's opening line come from here.
+# Replace Ada Example with yourself. The build checks every field and names any mistake.
+#
+# Text fields accept inline Markdown: [link](url), **bold**, *italic*, `code`.
+# Dates are YYYY or YYYY-MM; leave out `end` for something current.
+# Add `hidden: true` to any experience or education entry to leave it out.
+
+name: Ada Example
+# One line under your name on Home.
+tagline: Software engineer. I like building small, careful tools.
+# Shown in Home's title block.
+location: Anywhere, Earth
+# The site's search and social-preview description, for pages without their own.
+description: Ada Example, software engineer.
+# Your blog's RSS feed.
+feed:
+  title: Ada Example
+  description: Notes on software and the things around it.
+
+# A square image for the GitHub card on Home (optional). Put it in public/images/.
+avatar: /images/avatar.svg
+links:
+  email: ada@example.com
+  github: https://github.com/ada-example
+  linkedin: https://www.linkedin.com/in/ada-example
+# How Home's contact links read.
+contact:
+  email: email me
+  linkedin: connect on linkedin
+
+home:
+  # Paragraphs before the GitHub card.
+  intro:
+    - I'm a software engineer at Example Corp, where I build the tools other engineers use every day.
+    - I also work in the open. You can find my projects and contributions on GitHub.
+  # The paragraph before your three newest posts.
+  writing: I write now and then, mostly about software. The rest is on [my blog](/blog).
+  # Paragraphs after the posts.
+  closing:
+    - Before all this, I studied computer science at Example University.
+
+# Each page's opening line, under its title. Also used as the page's search description.
+pages:
+  about: Building small, careful tools.
+  education: Where I learned.
+  projects: Things I've built.
+  blog: Notes on software and the things around it.
+  now: What I'm up to these days.
+
+experience:
+  # A job with a promotion: one summary, then each role, newest first.
+  - org: Example Corp
+    url: https://example.com
+    summary: I build internal tools for engineering teams, from the services they call to the dashboards they watch.
+    roles:
+      - title: Senior Software Engineer
+        start: 2024-03
+        highlights:
+          - Lead a **build-caching service** used by every team, cutting average CI time by 40%.
+          - Mentor two engineers and run the team's design reviews.
+      - title: Software Engineer
+        start: 2022-06
+        end: 2024-03
+        highlights:
+          - Ship the **deploy dashboard** teams use to watch releases go out.
+          - Write the on-call runbooks that halved time to recovery.
+
+  # A job with one role: its title and dates directly.
+  - org: Small Startup
+    summary: A five-person startup making scheduling software for clinics.
+    title: Software Engineer
+    start: 2021-01
+    end: 2022-05
+    highlights:
+      - Build the booking flow from scratch, used by 200 clinics at launch.
+
+education:
+  - school: Example University
+    degree: Bachelor of Science in Computer Science
+    start: 2017
+    end: 2021
+    details:
+      - "Selected coursework: Algorithms, Operating Systems, Databases, Human-Computer Interaction."
+      - Teaching assistant for the introductory programming course.

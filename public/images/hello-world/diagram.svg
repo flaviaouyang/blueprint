@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="800" height="320" font-family="Helvetica, Arial, sans-serif" font-size="22">
+  <rect width="800" height="320" fill="#ffffff"/>
+  <g fill="none" stroke="#000" stroke-width="2">
+    <rect x="60" y="110" width="200" height="100"/>
+    <rect x="540" y="110" width="200" height="100"/>
+    <path d="M260 140 H540 M520 130 L540 140 L520 150"/>
+    <path d="M540 180 H260 M280 170 L260 180 L280 190"/>
+  </g>
+  <g fill="#000" text-anchor="middle">
+    <text x="160" y="168">Browser</text>
+    <text x="640" y="168">Server</text>
+    <text x="400" y="128">request</text>
+    <text x="400" y="214">response</text>
+  </g>
+</svg>

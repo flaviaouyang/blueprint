@@ -1,0 +1,10 @@
+# Weekly dependency updates for the bun lockfile, grouped into one PR.
+version: 2
+updates:
+  - package-ecosystem: bun
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      dependencies:
+        patterns: ['*']
