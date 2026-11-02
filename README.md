@@ -1,17 +1,24 @@
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/logo-dark.svg">
+  <img src=".github/logo-light.svg" alt="" width="72" height="72">
+</picture>
+
 # Blueprint
 
-**[See it live →](https://flaviaouyang.github.io/blueprint)**
+**A personal site that looks like an engineering drawing.**<br>
+Fill in one file about yourself, deploy, done.
+
+[**Live demo**](https://flaviaouyang.github.io/blueprint) ·
+[**Use this template**](https://github.com/new?template_name=blueprint&template_owner=flaviaouyang) ·
+[**Docs**](doc/content.md)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fflaviaouyang%2Fblueprint&project-name=my-site&repository-name=my-site)
 
-A personal site that looks like an engineering drawing: drafting blue on bone paper, a
-framed sheet, grid panels behind each page's title, and a drawing title block as the
-footer. Home, About, Projects, a blog, and a Now page, all written in plain files, built
-as static HTML with [Astro](https://astro.build), and deployed free on Vercel.
+<br>
 
-You fill in one file about yourself and you have a site.
-
-![Ada Example's home page on bone paper: a framed sheet with a grid panel behind the name, a GitHub card, the latest post, and a drawing title block as the footer](.github/screenshots/home.png)
+<img src=".github/screenshots/home.png" alt="Ada Example's home page on bone paper: a framed sheet with a grid panel behind the name, a GitHub card, the latest post, and a drawing title block as the footer">
 
 <table>
   <tr>
@@ -19,94 +26,89 @@ You fill in one file about yourself and you have a site.
     <td width="50%"><img src=".github/screenshots/about.png" alt="The About page on white paper, with experience and education tabs, a contents list of companies, and role titles with their dates"></td>
   </tr>
   <tr>
-    <td align="center">A post, on blueprint (the dark theme)</td>
-    <td align="center">About, on white</td>
+    <td align="center"><sub>A post, on blueprint (the dark theme)</sub></td>
+    <td align="center"><sub>About, on white</sub></td>
   </tr>
 </table>
 
-- **Framework:** [Astro](https://astro.build), static output
-- **Content:** Markdown and MDX, plus one YAML file about you, checked at build time
-- **Styling:** plain CSS from a small set of design tokens; fonts are [Geist](https://vercel.com/font) and Geist Mono
-- **Deployment and analytics:** [Vercel](https://vercel.com), with Web Analytics and Speed Insights if you turn them on
+</div>
 
-## Make it yours in five minutes
+## What you get
 
-**Fastest:** click **Deploy with Vercel** above. It copies this repository into your
-GitHub account and puts it online. Then clone your copy and continue from step 2 to make
-it yours; every push redeploys.
+<table>
+  <tr>
+    <td width="33%" valign="top"><b>Five pages</b><br>Home, About (experience and education), Projects, a blog, and a Now page.</td>
+    <td width="33%" valign="top"><b>Plain files</b><br>Everything you write lives in <code>content/</code>: one YAML file about you, Markdown for posts. Typos are caught at build time.</td>
+    <td width="33%" valign="top"><b>Three papers</b><br>Bone, white, and blueprint (dark). Visitors in dark mode get blueprint automatically.</td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Drafting details</b><br>A framed sheet, grid panels that read out coordinates on hover, and a title block as the footer.</td>
+    <td valign="top"><b>Built for writing</b><br>Numbered sections, a table of contents in the margin, highlighted code, numbered figures, Bluesky comments.</td>
+    <td valign="top"><b>Fast and accessible</b><br>Static HTML, about 1 KB of JavaScript, 65 KB of fonts, WCAG AA contrast, RSS, sitemap, and social previews.</td>
+  </tr>
+</table>
 
-**Or by hand.** You need [bun](https://bun.sh) and Node 22.23 or newer.
+Built with [Astro](https://astro.build), plain CSS from a small set of design tokens, and the [Geist](https://vercel.com/font) fonts. Deploys to [Vercel](https://vercel.com) or GitHub Pages.
 
-1. **Copy the template.** On GitHub, click **Use this template** → **Create a new
-   repository**, then clone your copy.
-2. **Install and run it:**
+## Quickstart
+
+1. **Get a copy.** Click **Deploy with Vercel** above to copy the repository and put it online in one go, or **Use this template** to just copy it.
+2. **Run it locally** (needs [bun](https://bun.sh) and Node 22.23+):
 
    ```bash
    bun install
-   bun run dev
+   bun run dev    # http://localhost:4321
    ```
 
-   Open <http://localhost:4321>. You'll see Ada Example's site.
-3. **Make it about you.** Edit `content/profile.yaml`: your name, a one-line tagline,
-   links, Home's few paragraphs, your jobs and schooling. The page updates as you save.
-   If something is wrong (a typo in a field name, a bad date), the dev server tells you
-   exactly where.
-4. **Set your address.** In `astro.config.mjs`, change `site: 'https://example.com'` to
-   your domain (or your `*.vercel.app` address).
-5. **Swap the examples.** Replace or delete `content/posts/hello-world.mdx`,
-   `content/projects/example-project.mdx`, and `content/now.mdx`, plus the images in
-   `public/images/`.
-6. **Deploy.** Push to GitHub, then on [vercel.com/new](https://vercel.com/new) import
-   the repository. Vercel reads the build settings from `vercel.json`; there's nothing
-   to configure.
+3. **Make it yours.** Edit `content/profile.yaml`, set your address in `astro.config.mjs` (`site:`), and replace the example post, project, and Now page in `content/`. Push, and your site redeploys.
 
-### Or deploy to GitHub Pages
-
-The repository includes a workflow (`.github/workflows/pages.yml`) that publishes the site
-to `https://<you>.github.io/<repository>` on every push to `main`. Turn it on under
-**Settings → Pages → Source: GitHub Actions**, then push (or run the workflow from the
-**Actions** tab). The workflow sets the address and sub-path for you; it does nothing in
-repositories where Pages is off. Links you write yourself in posts should be relative
-(`../about`) or full URLs, since the site lives under `/<repository>/` there.
-
-Optional finishing touches: your own favicon (`public/favicon.ico`, `icon-32.png`,
-`icon-192.png`, `apple-touch-icon.png`) and social-preview image (`public/og.png`,
-1200×630).
+The dev server updates as you save, and if a field is wrong it tells you which file and which field.
 
 ## Writing
 
-Everything you write lives in `content/`; no copy lives in the code.
-
-| File | What it is |
+| File | What it holds |
 | --- | --- |
 | `content/profile.yaml` | You: name, tagline, links, Home's paragraphs, each page's opening line, experience, education |
 | `content/posts/*.mdx` | Blog posts. Start one with `make blog SLUG=my-post TITLE="My post"` |
-| `content/projects/*.mdx` | Projects. Add a body to give one its own page |
+| `content/projects/*.mdx` | Projects. Give one a body and it gets its own page |
 | `content/now.mdx` | What you're doing now |
 
-[doc/content.md](doc/content.md) explains every field, with examples. In short:
+- **Drafts:** `draft: true` keeps a post or project off the live site; it still shows in `bun run dev`.
+- **Hiding:** `hidden: true` takes a job or school off the site without deleting it.
+- **Placeholders:** write `TODO(content)` anywhere you mean to come back to; production deploys refuse to go out until it's gone.
 
-- **Drafts:** add `draft: true` to a post or project to keep it off the live site. It
-  still shows in `bun run dev`, marked "Draft".
-- **Hiding:** add `hidden: true` to a job or school to take it off the site without
-  deleting it.
-- **Projects** only appear in the nav once at least one is published.
-- **Placeholders:** write `TODO(content)` anywhere you mean to come back to. Production
-  deploys refuse to go out while any remain, and list the files.
+Every field, with examples, is in **[doc/content.md](doc/content.md)**.
 
-## What's in the design
+<details>
+<summary><b>Deploy to GitHub Pages instead</b></summary>
 
-- **Papers:** the Material cell in each page's title block switches between bone,
-  white, and blueprint (a dark theme: white lines on cyanotype blue). Visitors whose
-  system is in dark mode get blueprint automatically.
-- **Grid panels** snap to whole cells; hovering one reads out the cell's coordinate.
-- **Posts** get numbered sections, a table of contents in the margin, highlighted code,
-  numbered figures in a duotone, and optional comments from a Bluesky thread.
-- **Fast and accessible:** static pages, two self-hosted fonts (65 KB), about 1 KB of
-  JavaScript, light and dark themes that pass WCAG AA contrast, and an RSS feed, sitemap,
-  and social-preview tags built in.
+<br>
 
-## Commands
+The included workflow (`.github/workflows/pages.yml`) publishes the site to `https://<you>.github.io/<repository>` on every push to `main`.
+
+1. In your repository, open **Settings → Pages** and set **Source** to **GitHub Actions**.
+2. Push, or run **Deploy to GitHub Pages** from the **Actions** tab.
+
+The workflow sets the address and sub-path for you, and does nothing in repositories where Pages is off. Links you write by hand inside posts should be relative (`../about`) or full URLs, since the site lives under `/<repository>/`.
+
+</details>
+
+<details>
+<summary><b>Make it look like you</b></summary>
+
+<br>
+
+- **Favicon:** replace `public/favicon.ico`, `icon-32.png`, `icon-192.png`, and `apple-touch-icon.png`.
+- **Social preview:** replace `public/og.png` (1200 × 630).
+- **Avatar:** set `avatar:` in `profile.yaml` to an image in `public/images/`.
+- **Colours, type, spacing:** all in `src/styles/tokens.css`, including each paper's palette.
+
+</details>
+
+<details>
+<summary><b>Commands</b></summary>
+
+<br>
 
 ```bash
 bun run dev      # local site at http://localhost:4321
@@ -116,26 +118,31 @@ make blog SLUG=my-post TITLE="My post"               # new draft post
 node scripts/check-urls.mjs http://localhost:4321   # check every internal link
 ```
 
-If the dev server errors on content that builds fine (usually right after changing
-`src/content.config.ts`), clear Astro's cache with `rm -rf .astro node_modules/.astro`,
-then start it again.
+If the dev server errors on content that builds fine (usually right after changing `src/content.config.ts`), clear Astro's cache with `rm -rf .astro node_modules/.astro` and start it again.
 
-## Layout
+</details>
+
+<details>
+<summary><b>Project layout</b></summary>
+
+<br>
 
 | Path | What it holds |
 | --- | --- |
-| `content/` | Your writing (see above) |
+| `content/` | Your writing |
 | `src/pages/` | One file per route |
 | `src/layouts/Base.astro` | Page shell: head, framed sheet, nav, title-block footer |
 | `src/components/` | Plate (grid panel), SiteNav, TitleBlock, Tabs, Toc, Figure, Replies, Arrow |
-| `src/lib/` | Content queries and formatting, the section list (`sections.ts`), URL helpers |
-| `src/styles/tokens.css` | Design tokens: colours for each paper, type, spacing, fonts |
+| `src/lib/` | Content queries and formatting, the section list, URL helpers |
+| `src/styles/tokens.css` | Design tokens: each paper's colours, type, spacing, fonts |
 | `src/styles/site.css` | Components and page shell, built only from tokens |
 | `src/scripts/` | Optional interactions: grid readout, paper switch, TOC highlight, Bluesky replies |
 | `src/content.config.ts` | The rules every content file is checked against |
 | `public/` | Fonts, images, icons, social-preview image |
 | `vercel.json` | Build settings, clean URLs, and security headers |
 
-## Credits and license
+</details>
 
-[MIT licensed](LICENSE). Designed by [Flavia Ouyang](https://www.flaviaouyang.com). If you use it, a small credit (for example, a link in your README or your site's footer) is appreciated, though not required.
+## License
+
+[MIT](LICENSE). Designed by [Flavia Ouyang](https://www.flaviaouyang.com). If you use it, a small credit, like a link in your README or your site's footer, is appreciated but not required.
