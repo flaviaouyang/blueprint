@@ -1,6 +1,6 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fflaviaouyang%2Fblueprint&project-name=my-site&repository-name=my-site)
-
 # Blueprint
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fflaviaouyang%2Fblueprint&project-name=my-site&repository-name=my-site)
 
 A personal site that looks like an engineering drawing: drafting blue on bone paper, a
 framed sheet, grid panels behind each page's title, and a drawing title block as the
@@ -31,7 +31,7 @@ it yours; every push redeploys.
    bun run dev
    ```
 
-   Open http://localhost:4321. You'll see Ada Example's site.
+   Open <http://localhost:4321>. You'll see Ada Example's site.
 3. **Make it about you.** Edit `content/profile.yaml`: your name, a one-line tagline,
    links, Home's few paragraphs, your jobs and schooling. The page updates as you save.
    If something is wrong (a typo in a field name, a bad date), the dev server tells you
@@ -54,7 +54,7 @@ Optional finishing touches: your own favicon (`public/favicon.ico`, `icon-32.png
 Everything you write lives in `content/`; no copy lives in the code.
 
 | File | What it is |
-|---|---|
+| --- | --- |
 | `content/profile.yaml` | You: name, tagline, links, Home's paragraphs, each page's opening line, experience, education |
 | `content/posts/*.mdx` | Blog posts. Start one with `make blog SLUG=my-post TITLE="My post"` |
 | `content/projects/*.mdx` | Projects. Add a body to give one its own page |
@@ -99,7 +99,7 @@ then start it again.
 ## Layout
 
 | Path | What it holds |
-|---|---|
+| --- | --- |
 | `content/` | Your writing (see above) |
 | `src/pages/` | One file per route |
 | `src/layouts/Base.astro` | Page shell: head, framed sheet, nav, title-block footer |
@@ -114,8 +114,4 @@ then start it again.
 
 ## Credits and license
 
-The code is [MIT licensed](LICENSE): use it, change it, ship it.
-
-The Draft Paper design was made by [Flavia Ouyang](https://www.flaviaouyang.com). If you
-use it, a small credit (for example, a link in your README or your site's footer) is
-appreciated, though not required.
+[MIT licensed](LICENSE). Designed by [Flavia Ouyang](https://www.flaviaouyang.com). If you use it, a small credit (for example, a link in your README or your site's footer) is appreciated, though not required.
