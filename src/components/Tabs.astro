@@ -1,6 +1,6 @@
 ---
 // A section split into tabs, e.g. About (experience, education). Plain links, so each tab is its own page with its own URL.
-import { cleanPath } from '../lib/paths';
+import { cleanPath, href } from '../lib/paths';
 
 export interface Props {
   /** Accessible name for the tab list, e.g. "About". */
@@ -12,5 +12,5 @@ const { label, tabs } = Astro.props;
 const path = cleanPath(Astro.url.pathname);
 ---
 <nav class="tabs" aria-label={label}>
-  {tabs.map(({ href, label }) => <a {href} aria-current={path === href ? 'page' : undefined}>{label}</a>)}
+  {tabs.map(({ href: tab, label }) => <a href={href(tab)} aria-current={path === tab ? 'page' : undefined}>{label}</a>)}
 </nav>

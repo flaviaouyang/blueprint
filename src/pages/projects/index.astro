@@ -7,11 +7,12 @@ import Arrow from '../../components/Arrow.astro';
 import { published } from '../../lib/posts';
 import { getProfile } from '../../lib/profile';
 import { inline, plain } from '../../lib/markdown';
+import { href as link } from '../../lib/paths';
 
 const { pages } = await getProfile();
 const projects = (await getCollection('projects', published)).sort((a, b) => a.data.order - b.data.order);
 const href = ({ id, body, data }: (typeof projects)[number]) =>
-  body?.trim() ? `/projects/${id}` : (data.links.repo ?? data.links.demo);
+  body?.trim() ? link(`/projects/${id}`) : (data.links.repo ?? data.links.demo);
 ---
 <Base title="Projects" description={plain(pages.projects)} block={{ heading: 'Projects' }}>
   <Plate>

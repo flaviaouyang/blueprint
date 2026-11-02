@@ -6,6 +6,7 @@ import Arrow from '../../components/Arrow.astro';
 import { formatDay, getPosts } from '../../lib/posts';
 import { getProfile } from '../../lib/profile';
 import { inline, plain } from '../../lib/markdown';
+import { href } from '../../lib/paths';
 
 const { pages } = await getProfile();
 const posts = await getPosts();
@@ -21,7 +22,7 @@ const years = Object.entries(Object.groupBy(posts, ({ data }) => data.publishedA
     <section aria-labelledby={`y${year}`}>
       <h2 class="year label" id={`y${year}`}>{year}</h2>
       {yearPosts!.map(({ id, data }) => (
-        <a class="card" href={`/blog/${id}`}>
+        <a class="card" href={href(`/blog/${id}`)}>
           <span class="card-left">
             <time class="label" datetime={data.publishedAt.toISOString().slice(0, 10)}>{formatDay(data.publishedAt)}</time>
             {data.title}

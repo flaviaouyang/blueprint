@@ -1,3 +1,5 @@
+import { href } from './paths';
+
 const ESCAPES: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
 
 /**
@@ -11,7 +13,7 @@ export const inline = (text: string) =>
   text
     .replace(/[&<>"']/g, (c) => ESCAPES[c])
     .replace(/`([^`]+)`/g, '<code>$1</code>')
-    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2">$1</a>')
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, text: string, url: string) => `<a href="${href(url)}">${text}</a>`)
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.+?)\*|(?<!\w)_(.+?)_(?!\w)/g, '<em>$1$2</em>');
 

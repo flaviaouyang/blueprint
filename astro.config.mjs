@@ -8,8 +8,11 @@ import placeholderGuard from './integrations/placeholder-guard.mjs';
 // https://docs.astro.build/en/reference/configuration-reference/
 export default defineConfig({
   // Your site's address: used for canonical links, the sitemap, RSS, robots.txt, and
-  // social previews. Change it before you deploy.
-  site: 'https://example.com',
+  // social previews. Change it before you deploy. SITE_URL and BASE_PATH override it, for
+  // hosting under a sub-path such as GitHub Pages (https://you.github.io/repo, base /repo;
+  // see .github/workflows/pages.yml).
+  site: process.env.SITE_URL ?? 'https://example.com',
+  base: process.env.BASE_PATH ?? '/',
   // URLs have no trailing slash (/blog/hello-world). Pages build to
   // blog/hello-world.html, served extensionless by vercel.json's cleanUrls.
   trailingSlash: 'never',

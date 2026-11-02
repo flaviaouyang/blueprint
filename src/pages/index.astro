@@ -7,6 +7,7 @@ import Arrow from '../components/Arrow.astro';
 import { getPosts } from '../lib/posts';
 import { getProfile } from '../lib/profile';
 import { inline } from '../lib/markdown';
+import { href } from '../lib/paths';
 
 const { name, tagline, location, avatar, links, contact, home } = await getProfile();
 const LATEST_POSTS = 3;
@@ -23,7 +24,7 @@ const github = new URL(links.github).pathname.slice(1);
 
   <div class="cards">
     <a class="card" href={links.github}>
-      <span class="card-left">{avatar && <img class="avatar duotone" src={avatar} width="56" height="56" alt="" />}@{github}</span>
+      <span class="card-left">{avatar && <img class="avatar duotone" src={href(avatar)} width="56" height="56" alt="" />}@{github}</span>
       <Arrow />
     </a>
   </div>
@@ -32,7 +33,7 @@ const github = new URL(links.github).pathname.slice(1);
 
   <div class="cards">
     {posts.map(({ id, data }, i) => (
-      <a class="card" href={`/blog/${id}`}>
+      <a class="card" href={href(`/blog/${id}`)}>
         <span class="card-left">
           <span class="balloon" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
           {data.title}

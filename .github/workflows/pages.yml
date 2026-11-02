@@ -1,0 +1,47 @@
+# Publishes the site to GitHub Pages on every push to main.
+#
+# It only runs in repositories where Pages is turned on (Settings → Pages → Source:
+# GitHub Actions), so it stays out of the way if you deploy to Vercel instead.
+# configure-pages supplies the address: https://<you>.github.io/<repo>, or your custom
+# domain, which the build reads as SITE_URL and BASE_PATH (see astro.config.mjs).
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    if: github.event.repository.has_pages
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: oven-sh/setup-bun@v2
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - id: pages
+        uses: actions/configure-pages@v6
+      - run: bun install --frozen-lockfile
+      - run: bun run build
+        env:
+          SITE_URL: ${{ steps.pages.outputs.origin }}
+          BASE_PATH: ${{ steps.pages.outputs.base_path || '/' }}
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+      - id: deployment
+        uses: actions/deploy-pages@v5

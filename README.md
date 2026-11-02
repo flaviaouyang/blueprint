@@ -1,5 +1,7 @@
 # Blueprint
 
+**[See it live →](https://flaviaouyang.github.io/blueprint)**
+
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fflaviaouyang%2Fblueprint&project-name=my-site&repository-name=my-site)
 
 A personal site that looks like an engineering drawing: drafting blue on bone paper, a
@@ -57,6 +59,15 @@ it yours; every push redeploys.
 6. **Deploy.** Push to GitHub, then on [vercel.com/new](https://vercel.com/new) import
    the repository. Vercel reads the build settings from `vercel.json`; there's nothing
    to configure.
+
+### Or deploy to GitHub Pages
+
+The repository includes a workflow (`.github/workflows/pages.yml`) that publishes the site
+to `https://<you>.github.io/<repository>` on every push to `main`. Turn it on under
+**Settings → Pages → Source: GitHub Actions**, then push (or run the workflow from the
+**Actions** tab). The workflow sets the address and sub-path for you; it does nothing in
+repositories where Pages is off. Links you write yourself in posts should be relative
+(`../about`) or full URLs, since the site lives under `/<repository>/` there.
 
 Optional finishing touches: your own favicon (`public/favicon.ico`, `icon-32.png`,
 `icon-192.png`, `apple-touch-icon.png`) and social-preview image (`public/og.png`,
