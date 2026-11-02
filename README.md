@@ -9,6 +9,19 @@ as static HTML with [Astro](https://astro.build), and deployed free on Vercel.
 
 You fill in one file about yourself and you have a site.
 
+![Ada Example's home page on bone paper: a framed sheet with a grid panel behind the name, a GitHub card, the latest post, and a drawing title block as the footer](.github/screenshots/home.png)
+
+<table>
+  <tr>
+    <td width="50%"><img src=".github/screenshots/post.png" alt="A blog post on the blueprint (dark) paper, with a table of contents in the margin, numbered sections, and highlighted code"></td>
+    <td width="50%"><img src=".github/screenshots/about.png" alt="The About page on white paper, with experience and education tabs, a contents list of companies, and role titles with their dates"></td>
+  </tr>
+  <tr>
+    <td align="center">A post, on blueprint (the dark theme)</td>
+    <td align="center">About, on white</td>
+  </tr>
+</table>
+
 - **Framework:** [Astro](https://astro.build), static output
 - **Content:** Markdown and MDX, plus one YAML file about you, checked at build time
 - **Styling:** plain CSS from a small set of design tokens; fonts are [Geist](https://vercel.com/font) and Geist Mono
